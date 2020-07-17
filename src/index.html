@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="вёрстка, HTML, CSS, блог">
+    <meta name="description" content="Блог о процессе обучения веб-технологиям">
+    <title>Сайт начинающего верстальщика</title>
+    <link rel="stylesheet" href="css/outlines.css">
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="js/analytics.js"></script>
+    
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  </head>
+  <body>
+    <header>
+      <h1>TOXIN</h1>
+      <div class="lock"></div>
+      <div class="nav-person">
+        <nav>
+          <ul class="ul-nav">
+            <li>О нас</li>
+            <li>Услуги</li>
+            <li>Вакансии</li>
+            <li>Новости</li>
+            <li>Соглашения</li>
+          </ul>
+        </nav>
+        <div class="personality">
+          <button>
+            ВОЙТИ
+          </button>
+          <button>
+            ЗАРЕГИСТРИРОВАТЬСЯ
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section>
+        <div class="front-choice">cartun
+          <div class="calendar">
+            <h2>Найдем номера под ваши пожелания</h2>
+            <form>
+              <input type="text" name="birthday" value="03/13/1984" /><input type="text" name="birthday" value="03/14/1984" />
+              <label>
+                ПРИБЫТИЕ
+                <input type="date" name="coming">
+              </label>
+              <label>
+                ВЫЕЗД
+                <input type="date" name="coming" class="departure">
+              </label>
+              <label>ГОСТИ
+                <select name="phone">
+                  <option value="man">взрослые</option>
+                  <option value="child">дети</option>
+                </select>
+              </label>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section class="information">
+        <div class="info">
+          <img src="" title="logo">
+          <p>Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
+        </div>
+        <ul class="ul-info">
+          <li>НАВИГАЦИЯ</li>
+          <li>О нас</li>
+          <li>Новости</li>
+          <li>Служба поддержки</li>
+          <li>Услуги</li>
+        </ul>
+        <ul class="ul-info">
+          <li>О НАС</li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <ul class="ul-info">
+          <li>СЛУЖБА ПОДДДЕРЖКИ</li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <form>
+          <h4>ПОДПИСКА</h4>
+          <label>kjdfhxgdifkjgk<input type="email" name=""></label>
+          <input type="submit" name="">
+        </form>
+      </section>
+    </footer>
+
+<script>
+$(function() {
+  $('input[name="birthday"]').daterangepicker({
+    singleDatePicker: true,
+    minYear: 1901,
+    maxYear: parseInt(moment().format('YYYY'),10)
+  }, function(start, end, label) {
+    var years = moment().diff(start, 'years');
+    alert("You are " + years + " years old!");
+  });
+});
+</script>
+
+  </body>
+</html>
