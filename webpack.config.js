@@ -2,8 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
-
 const isDev = process.env.NODE_ENV === 'development'
 console.log('IS DEV', isDev)
 
@@ -28,6 +26,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html',
         }),
+        new HtmlWebpackPlugin({
+      template: `./src/index.pug`,
+      filename: './about/index-b.html',
+      inject: true
+    }),
     ],
     module: {
         rules: [
@@ -38,6 +41,10 @@ module.exports = {
             {
                 test: /\.(png|jpg|svg|gif)$/,
                 use: ['file-loader']
+            },
+            {
+              test: /\.pug$/,
+              loader: 'pug-loader'
             },
             {
                 test: /\.js$/,

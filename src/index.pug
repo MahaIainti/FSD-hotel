@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    style
+      include ./css/outlines.css
+  body
+    h1 My Site
+    - const currentPage = 'Home'
+		- const nav = [
+		-   { name: 'Home', url: '/' },
+		-   { name: 'Products', url: '/products' },
+		-   { name: 'Contact', url: '/contact' }
+		- ]
+
+		mixin mainMenu
+		  ul
+		    each navItem in nav
+		      li(class=(currentPage === navItem.name ? 'selected' : ''))
+		        a(href=navItem.url)= navItem.name
+
+		// - The following could be an include
+		nav
+		  +mainMenu
