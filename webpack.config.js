@@ -7,9 +7,10 @@ console.log('IS DEV', isDev)
 
 module.exports = {
     mode: 'development',
+    context: path.resolve(__dirname,'src'),
     entry: {
-        main: ['@babel/polyfill','./src/js/index.js'],
-        analytics: './src/js/analytics.js'
+        main: ['@babel/polyfill','./js/index.js'],
+        analytics: './js/analytics.js'
     },
     output: {
         path: path.resolve(__dirname,'dist'),
@@ -17,20 +18,26 @@ module.exports = {
     },
     devServer: {
         inline: true,
-        contentBase: './src',
+        //contentBase: './src',
         port: 3000,
         hot: isDev,
     },
     devtool: 'cheap-module-eval-source-map',
+    optimization: {
+        splitChunks: {
+            chunks: 'all'
+        }
+    },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html',
+            template: './index.html',
+            filename: './index-b.html',
         }),
         new HtmlWebpackPlugin({
-      template: `./src/index.pug`,
-      filename: './about/index-b.html',
-      inject: true
-    }),
+            template: `./index.pug`,
+            filename: './index.html',
+            inject: true
+        }),
     ],
     module: {
         rules: [

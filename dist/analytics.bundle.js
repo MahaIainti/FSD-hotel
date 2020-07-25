@@ -81,20 +81,20 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/analytics.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./js/analytics.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/js/analytics.js":
-/*!*****************************!*\
-  !*** ./src/js/analytics.js ***!
-  \*****************************/
+/***/ "./js/analytics.js":
+/*!*************************!*\
+  !*** ./js/analytics.js ***!
+  \*************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nfunction createAnalytics() {\n  var counter = 0;\n\n  var listener = function listener() {\n    return counter++;\n  };\n\n  addEventListener(\"click\", listener);\n  return {\n    getClick: function getClick() {\n      return counter;\n    }\n  };\n}\n\nwindow.analytics = createAnalytics();//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvanMvYW5hbHl0aWNzLmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL2pzL2FuYWx5dGljcy5qcz9jOGQ2Il0sInNvdXJjZXNDb250ZW50IjpbImZ1bmN0aW9uIGNyZWF0ZUFuYWx5dGljcygpIHtcclxuXHRsZXQgY291bnRlciA9MFxyXG5cclxuXHRjb25zdCBsaXN0ZW5lciA9ICgpID0+IGNvdW50ZXIrK1xyXG5cclxuXHRhZGRFdmVudExpc3RlbmVyKCBcImNsaWNrXCIsIGxpc3RlbmVyKVxyXG5cclxuXHRyZXR1cm4ge1xyXG5cdFx0Z2V0Q2xpY2soKSB7XHJcblx0XHRcdHJldHVybiBjb3VudGVyXHJcblx0XHR9XHJcblx0fVxyXG59XHJcblxyXG53aW5kb3cuYW5hbHl0aWNzID0gY3JlYXRlQW5hbHl0aWNzKCkiXSwibWFwcGluZ3MiOiI7O0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBSEE7QUFLQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/js/analytics.js\n");
+eval("\n\nfunction createAnalytics() {\n  var counter = 0;\n\n  var listener = function listener() {\n    return counter++;\n  };\n\n  addEventListener(\"click\", listener);\n  return {\n    getClick: function getClick() {\n      return counter;\n    }\n  };\n}\n\nwindow.analytics = createAnalytics();//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9qcy9hbmFseXRpY3MuanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9qcy9hbmFseXRpY3MuanM/N2Y4YyJdLCJzb3VyY2VzQ29udGVudCI6WyJmdW5jdGlvbiBjcmVhdGVBbmFseXRpY3MoKSB7XHJcblx0bGV0IGNvdW50ZXIgPTBcclxuXHJcblx0Y29uc3QgbGlzdGVuZXIgPSAoKSA9PiBjb3VudGVyKytcclxuXHJcblx0YWRkRXZlbnRMaXN0ZW5lciggXCJjbGlja1wiLCBsaXN0ZW5lcilcclxuXHJcblx0cmV0dXJuIHtcclxuXHRcdGdldENsaWNrKCkge1xyXG5cdFx0XHRyZXR1cm4gY291bnRlclxyXG5cdFx0fVxyXG5cdH1cclxufVxyXG5cclxud2luZG93LmFuYWx5dGljcyA9IGNyZWF0ZUFuYWx5dGljcygpIl0sIm1hcHBpbmdzIjoiOztBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUhBO0FBS0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./js/analytics.js\n");
 
 /***/ })
 
