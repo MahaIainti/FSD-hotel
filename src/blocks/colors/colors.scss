@@ -1,0 +1,25 @@
+.colors {
+  &__box {
+      display: flex;
+      align-items: center;
+      margin-top: 1.4286rem;
+      }
+  &:first-child {
+      margin-top: 0;
+  }
+  &__title {
+      font-family: 'opensans-example', sans-serif;
+      font-size: 1.3571rem;
+      line-height: 2.0714rem;
+      color: black;
+  }
+  &__rgb {
+      
+  }
+  &__color {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 0.4286rem;
+      margin-right: 2.8571rem;
+  }
+}

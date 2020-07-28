@@ -1,41 +1,11 @@
 doctype html
 html
   head
-    style
+    block script
+      script(src="../node_modules/jquery/dist/jquery.min.js")
+      script(src="../node_modules/air-datepicker/dist/js/datepicker.js")
+    link(href="../node_modules/air-datepicker/dist/css/datepicker.css")
   body
-  	
-mixin colors(items = [])
-  .colors
-    each item in items
-      .colors__box
-        .colors__color(class=item.class)
-        .colors__name
-          p.colors__title= item.title
-          span.colors__rgb= item.rgb
-  
+    include blocks/colors-texts/colors-texts
 
-mixin texts(items = [])
-  .texts
-    each item in items
-      .texts__box
-        div(class=item.class)
-          span.texts__tag= item.tag
-          span.texts__text= item.text
-
-
-.colors-texts
-  +colors([
-    {title: "Dark Shade 100%", rgb: "#1F2041", class: "colors-texts__color-1"},
-    {title: "Dark Shade 75%", rgb: "#1F2041", class: "colors-texts__color-2"},
-    {title: "Dark Shade 50%", rgb: "#1F2041", class: "colors-texts__color-3"},
-    {title: "Dark Shade 25%", rgb: "#1F2041", class: "colors-texts__color-4"},
-    {title: "Dark Shade 5%", rgb: "#1F2041", class: "colors-texts__color-5"},
-    {title: "Purple", rgb: "#BC9CFF", class: "colors-texts__color-6"},
-    {title: "Green", rgb: "#6FCF97", class: "colors-texts__color-7"}
-  ])
-  +texts([
-    {class: "colors-texts__texts-box-h1", tag: "H1", text: "This one is the sub-section or widget title"},
-    {class: "colors-texts__texts-box-h2", tag: "H2", text: "Next one is the item title inside widgets"},
-    {class: "colors-texts__texts-box-h3", tag: "H3", text: "This is a label or CTA text"},
-    {class: "colors-texts__texts-box-body", tag: "Body", text: "This is the body text which is used for most of the design, like paragraphs, lists, etc."},
-  ])
+    input.datepicker-here

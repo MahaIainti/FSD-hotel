@@ -1,0 +1,9 @@
+mixin colors(items = [])
+  .colors
+    each item in items
+      .colors__box
+        .colors__color(class=item.class)
+        .colors__name
+          p.colors__title= item.title
+          span.colors__rgb= item.rgb
+  

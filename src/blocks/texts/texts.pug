@@ -1,0 +1,7 @@
+mixin texts(items = [])
+  .texts
+    each item in items
+      .texts__box
+        div(class=item.class)
+          span.texts__tag= item.tag
+          span.texts__text= item.text

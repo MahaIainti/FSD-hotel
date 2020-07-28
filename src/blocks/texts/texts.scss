@@ -1,0 +1,14 @@
+.texts {
+  &__box {
+    position: relative;
+    margin-bottom: 3.5714rem;
+    width: 25rem;
+  }
+  &__tag {
+    text-align: right;
+    position: absolute;
+    left: -3.5714rem;
+    color: black;
+    font-weight: 400;
+  }
+}
