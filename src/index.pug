@@ -1,11 +1,11 @@
 doctype html
-html
-  head
-    block script
-      script(src="../node_modules/jquery/dist/jquery.min.js")
-      script(src="../node_modules/air-datepicker/dist/js/datepicker.js")
-    link(href="../node_modules/air-datepicker/dist/css/datepicker.css")
-  body
-    include blocks/colors-texts/colors-texts
-
-    input.datepicker-here
+html(lang="ru")
+	head
+		title Toxin
+		block script
+			script(src="../node_modules/jquery/dist/jquery.min.js")
+			script(src="../node_modules/air-datepicker/dist/js/datepicker.min.js")
+	body
+		main
+			include pages/UI-Kit/UI-Kit.pug
+			include blocks/datepicker/datepicker.pug

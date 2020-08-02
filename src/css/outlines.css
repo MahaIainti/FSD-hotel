@@ -5,6 +5,7 @@ body {
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 14px;
   line-height: 20px;
+  padding-top: 
 }
 
 body {
@@ -149,3 +150,13 @@ aside::before {
 nav::before {
   content: "nav";
 }
+
+
+  &__tag {
+    text-align: right;
+    position: absolute;
+    left: -3.5714rem;
+    color: black;
+    font-weight: 400;
+    font-size: 1.5rem;
+  }

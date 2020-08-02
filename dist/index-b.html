@@ -7,7 +7,10 @@
     <title>Сайт начинающего верстальщика</title>
     <link rel="stylesheet" href="css/outlines.css">
     <meta name="viewport" content="width=device-width">
-    <script type="text/javascript" src="js/analytics.js"></script>
+<!--    <script type="text/javascript" src="js/analytics.js"></script>-->
+    <script type="text/javascript" src="blocks/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="blocks/datepicker/js/datepicker.js"></script>
+    <link rel="stylesheet" href="blocks/datepicker/css/datepicker.css"/>
   </head>
   <body>
     <header>
@@ -37,8 +40,13 @@
       <section>
         <div class="front-choice">cartun
           <div class="calendar">
+            <div >
+              <div id="panel" style="height: 20px"</div>
+              <a class="btn-slide">eee</a>
+            </div>
             <h2>Найдем номера под ваши пожелания</h2>
             <form>
+              <input type="date" class="datepicker-here">
               <label>
                 ПРИБЫТИЕ
                 <input type="date" name="coming">
@@ -91,19 +99,5 @@
         </form>
       </section>
     </footer>
-
-<script>
-$(function() {
-  $('input[name="birthday"]').daterangepicker({
-    singleDatePicker: true,
-    minYear: 1901,
-    maxYear: parseInt(moment().format('YYYY'),10)
-  }, function(start, end, label) {
-    var years = moment().diff(start, 'years');
-    alert("You are " + years + " years old!");
-  });
-});
-</script>
-
   <script src="vendors~main.bundle.js"></script><script src="main.bundle.js"></script><script src="analytics.bundle.js"></script></body>
 </html>

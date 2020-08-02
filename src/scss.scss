@@ -1,0 +1,26 @@
+
+@import "blocks/colors-types/colors-types.scss";
+@import "blocks/texts/texts.scss";
+@import "blocks/colors/colors.scss";
+@import "blocks/colors-texts/colors-texts.scss";
+@import "../node_modules/air-datepicker/dist/css/datepicker.css";
+@import "blocks/datepicker/datepicker.scss";
+@import "pages/UI-Kit/UI-Kit.scss";
+
+body, html {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  height: 100%;
+}
+body {
+  min-width: 320px;
+  max-width: 1920px;
+  margin: 0;
+}
+.lock {
+  width: 200px;
+  height: 200px;
+  border: 5;
+  background-color: green;
+}

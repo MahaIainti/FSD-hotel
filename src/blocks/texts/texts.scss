@@ -1,14 +1,65 @@
 .texts {
-  &__box {
+  width: 33.15%;
+  margin-top: 0.12rem;
+
+  &__bocks {
     position: relative;
-    margin-bottom: 3.5714rem;
     width: 25rem;
   }
-  &__tag {
-    text-align: right;
-    position: absolute;
-    left: -3.5714rem;
-    color: black;
-    font-weight: 400;
+  &__text {
+    line-height: 2.1429rem;
+    color: #1f2041;
+    font-weight: 700;
+  }
+};
+
+$tags: (h1: "H1", h2: "H2", h3: "H3", body: "Body");
+$sises: (h1: 1.72rem, h2: 1.4rem, h3: 0.9rem, body: 1.1rem);
+
+@mixin tags($name, $glyph) {
+  &::before{
+      text-align: right;
+      position: absolute;
+      top: 0.2rem;
+      left: -4rem;
+      color: rgba(31,32,65,.25);
+      font-weight: 400;
+      content: $glyph;
+  }
+};
+
+@mixin sises($name, $glyph) {
+  font-size: $glyph;
+  margin-bottom: 2em;
+  &::before{
+    font-size: $glyph;
+  };
+  @if $name == h2 {
+    margin-bottom: 1.9em;
+  }  @else if $name == h3 {
+    &::before{
+      left: -3.25rem;
+    }
+  }  @else if $name == body {
+    margin-top: 2.5em;
+      &::before{
+      left: -4.57rem;
+    };
+  }
+};
+
+@each $name, $glyph in $tags {
+  .colors-texts__texts-box-#{$name} {
+    @include tags($name, $glyph);
+  }
+};
+@each $name, $glyph in $sises {
+  .colors-texts__texts-box-#{$name} {
+    @include sises($name, $glyph);
   }
 }
+.colors-texts__texts-box-body .texts__text {
+      font-family: montserrat-example,sans-serif;
+      color: rgba(31,32,65,.75);
+      font-weight: 400;
+    }   

@@ -1,25 +1,48 @@
 .colors {
+  width: 20rem;
   &__box {
-      display: flex;
-      align-items: center;
-      margin-top: 1.4286rem;
-      }
-  &:first-child {
-      margin-top: 0;
-  }
-  &__title {
-      font-family: 'opensans-example', sans-serif;
-      font-size: 1.3571rem;
-      line-height: 2.0714rem;
-      color: black;
-  }
-  &__rgb {
-      
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+
+    &:first-child {
+    margin-top: 0;
+    }
   }
   &__color {
-      width: 5rem;
-      height: 5rem;
-      border-radius: 0.4286rem;
-      margin-right: 2.8571rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.4286rem;
+    margin-right: 2.8571rem;
+  }
+  &__title {
+    margin: 0.3rem 0 0.5rem 0;
+    font-family: 'opensans-example', sans-serif;
+    font-size: 1.3571rem;
+    color: black;
+  }
+  &__rgb {
+    font-family: montserrat-example,sans-serif;
+    font-size: 1.3571rem;
+  }
+};
+
+$icons: (1: 1, 2: 0.75, 3: 0.5, 4: 0.25, 5: 0.05, 6: #BC9CFF, 7: #6FCF97 );
+
+@mixin color($name, $glyph) {
+  @if ($name < 6) {
+    opacity: $glyph;
+  } @else if ($name == 6) {
+    opacity: 1;
+    background-color: $glyph;
+  } @else {
+    background-color: $glyph;
+  }
+};
+@each $name, $glyph in $icons {
+  .colors-texts__color-#{$name} {
+    display: inline-block;
+    background-color: #1F2041;
+    @include color($name, $glyph);
   }
 }
